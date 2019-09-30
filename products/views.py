@@ -14,6 +14,7 @@ from django.core.mail import send_mail
 from email_form.forms import EmailFormLight, EmailFormOneField
 from email_form.models import EmailModel
 
+
 def show_cars():
     qs = Products.objects.values('car').annotate(dcount=Count('car'))
     return qs
